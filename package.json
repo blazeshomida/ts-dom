@@ -1,0 +1,27 @@
+{
+  "name": "@blazeshomida/ts-dom",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/ts-dom.umd.cjs",
+  "module": "./dist/ts-dom.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/ts-dom.js",
+      "require": "./dist/ts-dom.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "pnpm clean && tsc && vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4",
+    "vite-plugin-dts": "^3.7.3"
+  }
+}
