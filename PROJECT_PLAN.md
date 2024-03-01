@@ -6,111 +6,149 @@ Develop a TypeScript library offering utility functions for DOM manipulation and
 
 ### Milestone 1: Initial Setup
 
-- - [ ] **Complete**
-- **Objective**: Prepare the development environment, initialize the project repository, and set up for publishing.
-- **Expected Output**:
-  - Set up the project with Vite in library mode.
-  - Initialize a git repository with an initial commit.
-  - Prepare `package.json` for publishing to npm, including configuring the `name`, `version`, `main`, `types`, and `scripts`.
-  - Ensure `.gitignore` is configured to exclude node modules and other non-essential files.
-  - Optional: Set up continuous integration/continuous deployment (CI/CD) for automated testing and publishing.
-- **Deliverable**: A ready-to-develop project setup with all necessary configurations for development and publishing.
+**Objective**: Prepare the development environment, initialize the project repository, and set up for publishing.
+
+**Tasks**:
+
+- Set up the project with Vite in library mode, ensuring a smooth development and build process.
+- Initialize a git repository and make the initial commit to establish version control from the start.
+- Configure `package.json` for npm publishing, including all necessary metadata and scripts for building and publishing.
+- Set up a `.gitignore` file to exclude node_modules and other non-essential files from version control.
+- Optionally, set up continuous integration and deployment (CI/CD) workflows for automated testing and publishing.
+
+**Deliverable**: A fully configured development environment and project structure ready for development and eventual publication.
 
 ### Milestone 2: TypeScript Basics
 
-- - [ ] **Complete**
-- **Objective**: Become comfortable with TypeScript's type definitions and syntax.
-- **Expected Output**:
-  - Types: `NullableElement`, `EventOptions`, `SelectorOrElements`.
-- **Deliverable**: A TypeScript file with defined types and documentation explaining their usage.
+**Objective**: Become comfortable with TypeScript's type definitions and syntax.
+
+**Tasks**:
+
+- Define `NullableElement` to represent elements that might or might not be present.
+- Create `EventOptions` type to unify boolean flags and objects for event listener options.
+- Establish `SelectorOrElements` to allow functions to accept various types of element selectors or actual elements.
+
+**Deliverable**: A TypeScript file with foundational types defined, accompanied by documentation on their intended use.
 
 ### Milestone 3: Query Selector Utilities
 
-- - [ ] **Complete**
-- **Objective**: Learn DOM manipulation using TypeScript.
-- **Expected Output**:
-  - Functions: `qs`, `qsa`.
-- **Deliverable**: TypeScript implementations with usage examples on a test HTML page.
+**Objective**: Learn DOM manipulation using TypeScript.
+
+**Tasks**:
+
+- Implement `qs` as a shorthand for `querySelector`, returning the first element matching a given selector, scoped optionally to a specific element.
+- Create `qsa` as an alias for `querySelectorAll`, returning all elements matching a given selector as an array, also scoping optionally.
+
+**Deliverable**: TypeScript functions for simplified DOM querying, with examples demonstrating their use.
 
 ### Milestone 4: Parsing and Resolving Selectors
 
-- - [ ] **Complete**
-- **Objective**: Improve string manipulation and conditional logic skills.
-- **Expected Output**:
-  - Functions: `parseSelector`, `resolveElements`.
-- **Deliverable**: A TypeScript file with functions and tests for various inputs.
+**Objective**: Improve string manipulation and conditional logic skills.
+
+**Tasks**:
+
+- `parseSelector`: Parse a CSS selector string to determine if it targets a single ID or multiple elements, returning the appropriate query result.
+- `resolveElements`: Resolve a mix of selectors and actual elements to a consistent set of DOM elements, facilitating operations on them.
+
+**Deliverable**: A TypeScript file implementing these parsing and resolving utilities, including various test scenarios.
 
 ### Milestone 5: Event Listener Utilities
 
-- - [ ] **Complete**
-- **Objective**: Explore event handling within TypeScript.
-- **Expected Output**:
-  - Functions: `on`, `off`.
-- **Deliverable**: Implementations with examples of event listener management.
+**Objective**: Explore event handling within TypeScript.
+
+**Tasks**:
+
+- `on`: Attach an event listener to elements, abstracting away the complexity of handling both single elements and collections.
+- `off`: Remove an event listener from elements, similarly handling both individual and grouped elements.
+
+**Deliverable**: Functions that simplify adding and removing event listeners, with documentation on usage patterns.
 
 ### Milestone 6: Class and Attribute Utilities
 
-- - [ ] **Complete**
-- **Objective**: Master dynamic class and attribute manipulation.
-- **Expected Output**:
-  - Functions: `addClass`, `removeClass`, `toggleClass`, `setAttr`, `getAttr`.
-- **Deliverable**: A TypeScript file with dynamic class and attribute updates demonstrated.
+**Objective**: Master dynamic class and attribute manipulation.
+
+**Tasks**:
+
+- Implement class manipulation functions (`addClass`, `removeClass`, `toggleClass`) to modify element classes easily.
+- Create attribute manipulation functions (`setAttr`, `getAttr`) for setting and getting attributes on elements.
+
+**Deliverable**: A set of utilities for class and attribute management, showcased through practical examples.
 
 ### Milestone 7: Data Attribute Utilities
 
-- - [ ] **Complete**
-- **Objective**: Efficiently manipulate data attributes.
-- **Expected Output**:
-  - Functions: `setDataAttr`, `getDataAttr`.
-- **Deliverable**: Utilities showcased through a sample application.
+**Objective**: Efficiently manipulate data attributes.
+
+**Tasks**:
+
+- `setDataAttr`: Set data attributes on elements, simplifying the API for custom data storage.
+- `getDataAttr`: Retrieve the value of data attributes from elements, ensuring proper handling of non-existent attributes.
+
+**Deliverable**: Utilities for managing data attributes, along with examples of setting and retrieving custom data.
 
 ### Milestone 8: Dynamic Style Manipulation
 
-- - [ ] **Complete**
-- **Objective**: Programmatically control element styles.
-- **Expected Output**:
-  - Functions: `setStyle`, `getStyle`.
-- **Deliverable**: TypeScript functions demonstrated on a test page.
+**Objective**: Programmatically control element styles.
+
+**Tasks**:
+
+- `setStyle`: Apply multiple style properties to elements, handling both individual and collection inputs.
+- `getStyle`: Retrieve specific style properties from elements, catering to computed styles if necessary.
+
+**Deliverable**: Functions for dynamic style manipulation, demonstrated with use cases like theme switching.
 
 ### Milestone 9: Element Creation, Manipulation, and Cloning
 
-- - [ ] **Complete**
-- **Objective**: Enable dynamic content creation, manipulation, and cloning.
-- **Expected Output**:
-  - Functions: `createElement`, `removeElement`, `cloneElement`, `appendChild`, `removeChild`, `replaceChild`.
-- **Deliverable**: Demonstrations of dynamic UI modifications using the created utilities.
+**Objective**: Enable dynamic content creation, manipulation, and cloning.
+
+**Tasks**:
+
+- `createElement`: Facilitate the creation of new DOM elements with optional attributes and children.
+- `removeElement`: Safely remove elements from the DOM, handling potential memory leaks.
+- `cloneElement`: Clone elements, offering deep cloning capabilities for nested structures.
+- Implement utilities for managing child elements (`appendChild`, `removeChild`, `replaceChild`), ensuring proper handling of DOM hierarchies.
+
+**Deliverable**: A comprehensive set of utilities for DOM element management, supported by examples of creating dynamic interfaces.
 
 ### Milestone 10: Event Delegation
 
-- - [ ] **Complete**
-- **Objective**: Implement efficient event handling through delegation.
-- **Expected Output**:
-  - Function: `delegateEvent`.
-- **Deliverable**: An example of event delegation in action.
+**Objective**: Implement efficient event handling through delegation.
+
+**Tasks**:
+
+- `delegateEvent`: Enable event delegation by attaching a single event listener to a parent element that handles events from children matching a selector.
+
+**Deliverable**: An implementation of event delegation, showcasing its use in optimizing event handling for dynamic content.
 
 ### Milestone 11: Element Size and Position Utilities
 
-- - [ ] **Complete**
-- **Objective**: Enable precise control and information retrieval regarding element size and position.
-- **Expected Output**:
-  - Function: `getSize` to wrap or mimic `getBoundingClientRect`.
-- **Deliverable**: A TypeScript function demonstrated with examples that retrieve and use the size and position data of elements for various purposes.
+**Objective**: Enable precise control and information retrieval regarding element size and position.
+
+**Tasks**:
+
+- `getSize`: Wrap or mimic `getBoundingClientRect` to provide an easy-to-use interface for getting element dimensions and positions.
+
+**Deliverable**: Utility function for retrieving size and position, with examples of applications like collision detection or layout adjustments.
 
 ### Milestone 12: Window Utilities
 
-- - [ ] **Complete**
-- **Objective**: Provide utilities for common window operations.
-- **Expected Output**:
-  - Functions: `onWindowResize`, `onWindowScroll`.
-- **Deliverable**: TypeScript functions with examples demonstrating efficient management of window-level events.
+**Objective**: Provide utilities for common window operations.
+
+**Tasks**:
+
+- `onWindowResize`: Handle window resize events, potentially debouncing them to avoid performance issues.
+- `onWindowScroll`: Manage window scroll events, offering throttling to enhance performance.
+
+**Deliverable**: Utilities for window event management, demonstrated within scenarios requiring responsive adjustments or scroll-based animations.
 
 ### Milestone 13: Keystroke Handling Utilities
 
-- - [ ] **Complete**
-- **Objective**: Simplify the process of handling keyboard events.
-- **Expected Output**:
-  - Function: `handleKeystrokes` for configuring keystroke actions.
-- **Deliverable**: A TypeScript function allowing developers to define key-action mappings in a concise manner, with examples showcasing common keyboard shortcuts handling.
+**Objective**: Simplify the process of handling keyboard events.
+
+**Tasks**:
+
+- `handleKeystrokes`: Allow the definition of key-action mappings, simplifying the implementation of keyboard shortcuts and navigation.
+
+**Deliverable**: A utility for streamlined keystroke handling, with examples covering common use cases like modal shortcuts or navigational aids.
 
 ### Final Project Submission
 
