@@ -68,7 +68,7 @@ jobs:
           cache: "pnpm"
 
       # Installs project dependencies
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
 
       # Builds the project
       - name: Build Project
